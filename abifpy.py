@@ -123,9 +123,9 @@ class Trace(object):
 
             self.id = self._get_file_id(in_file)
             self.name = self.get_data('SMPL1')
-            self.seq = self.get_data('PBAS2')
-            self.qual = ''.join([chr(ord(value) + 33) for value in self.get_data('PCON2')])
-            self.qual_val = [ord(value) for value in self.get_data('PCON2')]
+            self.seq = '' #self.get_data('PBAS2')
+            self.qual = '' #''.join([chr(ord(value) + 33) for value in self.get_data('PCON2')])
+            self.qual_val = '' #[ord(value) for value in self.get_data('PCON2')]
 
             if trimming:
                 self.seq, self.qual, self.qual_val = map(self.trim, 
